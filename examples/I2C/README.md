@@ -1,9 +1,9 @@
 ### Pinout
 ```cpp
-#define SDA 2
-#define SCL 1
+#define PIN_QWIIC_SDA 2
+#define PIN_QWIIC_SCL 1
 
-Wire.begin(SDA,SCL);
+Wire.begin(PIN_QWIIC_SDA,PIN_QWIIC_SCL);
 ```
 
 # Examples
