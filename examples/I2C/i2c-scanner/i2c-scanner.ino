@@ -10,7 +10,7 @@ void setup()
   Wire.begin(PIN_QWIIC_SDA,PIN_QWIIC_SCL);
 
   Serial.begin(115200);
-  while (!Serial);             // Leonardo: wait for serial monitor
+  while (!Serial);
   Serial.println("\nI2C Scanner");
 }
 

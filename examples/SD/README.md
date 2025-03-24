@@ -1,5 +1,5 @@
 ### Pinout
-```
+```cpp
 #define VSPI_MISO   40 // DAT
 #define VSPI_MOSI   38 // CMD
 #define VSPI_SCLK   39 // SCK/CLK
