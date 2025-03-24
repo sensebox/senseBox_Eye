@@ -1,7 +1,7 @@
 ### Pinout
 ```cpp
-#define SDA 39
-#define SCL 40
+#define SDA 2
+#define SCL 1
 
 Wire.begin(SDA,SCL);
 ```
