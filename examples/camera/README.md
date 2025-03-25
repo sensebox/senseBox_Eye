@@ -24,3 +24,6 @@
 Default example from the esp32 BSP. Streams camera images over Wifi.
 
 Requires version 3.0.7 of the BSP for face detection and recognition (newer versions dont include the model zoo anymore). Dont forget to adjust the Wifi credentials.
+
+### camera-display
+Continuously print current camera image on the display.
