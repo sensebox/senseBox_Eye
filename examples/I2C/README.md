@@ -22,3 +22,6 @@ Print temperature and humidity to serial.
 
 ### mpu6050
 Print acceleration, gyro and temperature to serial.
+
+### sps30
+Print PM1.0, PM2.5, PM4.0 and PM10 to serial.
