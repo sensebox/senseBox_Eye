@@ -4,7 +4,7 @@ void setup() {
   Serial.begin(115200);
   while (!Serial);
   Serial.println("ready");
-  pinMode(BOOT_BUTTON, INPUT_PULLUP);  // GPIO0 with internal pull-up resistor
+  pinMode(BOOT_BUTTON, INPUT_PULLUP);
 }
 
 void loop() {
