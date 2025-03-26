@@ -1,0 +1,173 @@
+##############################################################
+# senseBox-Eye
+
+senseBox_eye.name=senseBox Eye
+senseBox_eye.vid.0=0x303A
+senseBox_eye.pid.0=0x81B8
+senseBox_eye.vid.1=0x303A
+senseBox_eye.pid.1=0x81B9
+senseBox_eye.vid.2=0x303A
+senseBox_eye.pid.2=0x81BA
+
+senseBox_eye.bootloader.tool=esptool_py
+senseBox_eye.bootloader.tool.default=esptool_py
+
+senseBox_eye.upload.tool=esptool_py
+senseBox_eye.upload.tool.default=esptool_py
+senseBox_eye.upload.tool.network=esp_ota
+
+senseBox_eye.upload.maximum_size=1310720
+senseBox_eye.upload.maximum_data_size=327680
+senseBox_eye.upload.flags=
+senseBox_eye.upload.extra_flags=
+senseBox_eye.upload.use_1200bps_touch=true
+senseBox_eye.upload.wait_for_upload_port=true
+
+senseBox_eye.serial.disableDTR=false
+senseBox_eye.serial.disableRTS=false
+
+senseBox_eye.build.tarch=xtensa
+senseBox_eye.build.bootloader_addr=0x1000
+senseBox_eye.build.target=esp32s3
+senseBox_eye.build.mcu=esp32s3
+senseBox_eye.build.core=esp32
+senseBox_eye.build.variant=senseBox_eye
+senseBox_eye.build.board=senseBox_eye
+
+senseBox_eye.build.cdc_on_boot=1
+senseBox_eye.build.msc_on_boot=1
+senseBox_eye.build.dfu_on_boot=0
+senseBox_eye.build.f_cpu=240000000L
+senseBox_eye.build.flash_size=8MB
+senseBox_eye.build.flash_freq=80m
+senseBox_eye.build.flash_mode=dio
+senseBox_eye.build.boot=qio
+senseBox_eye.build.partitions=default
+senseBox_eye.build.defines=
+
+senseBox_eye.menu.CDCOnBoot.cdc=Enabled
+senseBox_eye.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+senseBox_eye.menu.CDCOnBoot.default=Disabled
+senseBox_eye.menu.CDCOnBoot.default.build.cdc_on_boot=0
+
+senseBox_eye.menu.MSCOnBoot.msc=Enabled
+senseBox_eye.menu.MSCOnBoot.msc.build.msc_on_boot=1
+senseBox_eye.menu.MSCOnBoot.default=Disabled
+senseBox_eye.menu.MSCOnBoot.default.build.msc_on_boot=0
+
+senseBox_eye.menu.DFUOnBoot.default=Disabled
+senseBox_eye.menu.DFUOnBoot.default.build.dfu_on_boot=0
+senseBox_eye.menu.DFUOnBoot.dfu=Enabled
+senseBox_eye.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+senseBox_eye.menu.UploadMode.cdc=Internal USB
+senseBox_eye.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+senseBox_eye.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+senseBox_eye.menu.UploadMode.default=UART0
+senseBox_eye.menu.UploadMode.default.upload.use_1200bps_touch=false
+senseBox_eye.menu.UploadMode.default.upload.wait_for_upload_port=false
+
+senseBox_eye.menu.PSRAM.enabled=Enabled
+senseBox_eye.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM
+senseBox_eye.menu.PSRAM.disabled=Disabled
+senseBox_eye.menu.PSRAM.disabled.build.defines=
+
+senseBox_eye.menu.PartitionScheme.tinyuf2=TinyUF2 4MB (1.3MB APP/960KB FATFS)
+senseBox_eye.menu.PartitionScheme.tinyuf2.build.custom_bootloader=bootloader-tinyuf2
+senseBox_eye.menu.PartitionScheme.tinyuf2.build.custom_partitions=partitions-4MB-tinyuf2
+senseBox_eye.menu.PartitionScheme.tinyuf2.upload.maximum_size=1441792
+senseBox_eye.menu.PartitionScheme.tinyuf2.upload.extra_flags=0x2d0000 "{runtime.platform.path}/variants/{build.variant}/tinyuf2.bin"
+senseBox_eye.menu.PartitionScheme.default_8MB=Default with spiffs (3MB APP/1.5MB SPIFFS)
+senseBox_eye.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+senseBox_eye.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+senseBox_eye.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+senseBox_eye.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+senseBox_eye.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+senseBox_eye.menu.PartitionScheme.minimal.build.partitions=minimal
+senseBox_eye.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+senseBox_eye.menu.PartitionScheme.no_ota.build.partitions=no_ota
+senseBox_eye.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+senseBox_eye.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+senseBox_eye.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+senseBox_eye.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+senseBox_eye.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+senseBox_eye.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+senseBox_eye.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+senseBox_eye.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+senseBox_eye.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+senseBox_eye.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+senseBox_eye.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+senseBox_eye.menu.PartitionScheme.huge_app.build.partitions=huge_app
+senseBox_eye.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+senseBox_eye.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+senseBox_eye.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+senseBox_eye.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+
+senseBox_eye.menu.CPUFreq.240=240MHz (WiFi)
+senseBox_eye.menu.CPUFreq.240.build.f_cpu=240000000L
+senseBox_eye.menu.CPUFreq.160=160MHz (WiFi)
+senseBox_eye.menu.CPUFreq.160.build.f_cpu=160000000L
+senseBox_eye.menu.CPUFreq.80=80MHz (WiFi)
+senseBox_eye.menu.CPUFreq.80.build.f_cpu=80000000L
+senseBox_eye.menu.CPUFreq.40=40MHz
+senseBox_eye.menu.CPUFreq.40.build.f_cpu=40000000L
+senseBox_eye.menu.CPUFreq.20=20MHz
+senseBox_eye.menu.CPUFreq.20.build.f_cpu=20000000L
+senseBox_eye.menu.CPUFreq.10=10MHz
+senseBox_eye.menu.CPUFreq.10.build.f_cpu=10000000L
+
+senseBox_eye.menu.FlashMode.qio=QIO
+senseBox_eye.menu.FlashMode.qio.build.flash_mode=dio
+senseBox_eye.menu.FlashMode.qio.build.boot=qio
+senseBox_eye.menu.FlashMode.dio=DIO
+senseBox_eye.menu.FlashMode.dio.build.flash_mode=dio
+senseBox_eye.menu.FlashMode.dio.build.boot=dio
+senseBox_eye.menu.FlashMode.qout=QOUT
+senseBox_eye.menu.FlashMode.qout.build.flash_mode=dout
+senseBox_eye.menu.FlashMode.qout.build.boot=qout
+senseBox_eye.menu.FlashMode.dout=DOUT
+senseBox_eye.menu.FlashMode.dout.build.flash_mode=dout
+senseBox_eye.menu.FlashMode.dout.build.boot=dout
+
+senseBox_eye.menu.FlashFreq.80=80MHz
+senseBox_eye.menu.FlashFreq.80.build.flash_freq=80m
+senseBox_eye.menu.FlashFreq.40=40MHz
+senseBox_eye.menu.FlashFreq.40.build.flash_freq=40m
+
+senseBox_eye.menu.FlashSize.8M=8MB (64Mb)
+senseBox_eye.menu.FlashSize.8M.build.flash_size=8MB
+
+senseBox_eye.menu.UploadSpeed.921600=921600
+senseBox_eye.menu.UploadSpeed.921600.upload.speed=921600
+senseBox_eye.menu.UploadSpeed.115200=115200
+senseBox_eye.menu.UploadSpeed.115200.upload.speed=115200
+senseBox_eye.menu.UploadSpeed.256000.windows=256000
+senseBox_eye.menu.UploadSpeed.256000.upload.speed=256000
+senseBox_eye.menu.UploadSpeed.230400.windows.upload.speed=256000
+senseBox_eye.menu.UploadSpeed.230400=230400
+senseBox_eye.menu.UploadSpeed.230400.upload.speed=230400
+senseBox_eye.menu.UploadSpeed.460800.linux=460800
+senseBox_eye.menu.UploadSpeed.460800.macosx=460800
+senseBox_eye.menu.UploadSpeed.460800.upload.speed=460800
+senseBox_eye.menu.UploadSpeed.512000.windows=512000
+senseBox_eye.menu.UploadSpeed.512000.upload.speed=512000
+
+senseBox_eye.menu.DebugLevel.none=None
+senseBox_eye.menu.DebugLevel.none.build.code_debug=0
+senseBox_eye.menu.DebugLevel.error=Error
+senseBox_eye.menu.DebugLevel.error.build.code_debug=1
+senseBox_eye.menu.DebugLevel.warn=Warn
+senseBox_eye.menu.DebugLevel.warn.build.code_debug=2
+senseBox_eye.menu.DebugLevel.info=Info
+senseBox_eye.menu.DebugLevel.info.build.code_debug=3
+senseBox_eye.menu.DebugLevel.debug=Debug
+senseBox_eye.menu.DebugLevel.debug.build.code_debug=4
+senseBox_eye.menu.DebugLevel.verbose=Verbose
+senseBox_eye.menu.DebugLevel.verbose.build.code_debug=5
+
+senseBox_eye.menu.EraseFlash.none=Disabled
+senseBox_eye.menu.EraseFlash.none.upload.erase_cmd=
+senseBox_eye.menu.EraseFlash.all=Enabled
+senseBox_eye.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
