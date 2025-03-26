@@ -25,3 +25,6 @@ Print acceleration, gyro and temperature to serial.
 
 ### sps30
 Print PM1.0, PM2.5, PM4.0 and PM10 to serial.
+
+### i2c-chain
+Combines display, vl53l8cx, hdc1080, mpu6050 and sps30. Draws the sensor measurements on the display and prints the loop times to serial.
