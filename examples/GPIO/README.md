@@ -37,4 +37,5 @@
 ```
 
 # Examples
-tbd
+### analog
+Read analog input and print it to serial.
