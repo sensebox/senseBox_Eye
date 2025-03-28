@@ -3,11 +3,11 @@
 
 senseBox_eye.name=senseBox-eye
 senseBox_eye.vid.0=0x303A
-senseBox_eye.pid.0=0x81B8
+senseBox_eye.pid.0=0x82D1
 senseBox_eye.vid.1=0x303A
-senseBox_eye.pid.1=0x81B9
+senseBox_eye.pid.1=0x82D2
 senseBox_eye.vid.2=0x303A
-senseBox_eye.pid.2=0x81BA
+senseBox_eye.pid.2=0x82D3
 
 senseBox_eye.bootloader.tool=esptool_py
 senseBox_eye.bootloader.tool.default=esptool_py
