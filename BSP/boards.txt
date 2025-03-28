@@ -1,7 +1,7 @@
 ##############################################################
 # senseBox-Eye
 
-senseBox_eye.name=senseBox Eye
+senseBox_eye.name=senseBox-eye
 senseBox_eye.vid.0=0x303A
 senseBox_eye.pid.0=0x81B8
 senseBox_eye.vid.1=0x303A
@@ -31,8 +31,8 @@ senseBox_eye.build.bootloader_addr=0x1000
 senseBox_eye.build.target=esp32s3
 senseBox_eye.build.mcu=esp32s3
 senseBox_eye.build.core=esp32
-senseBox_eye.build.variant=senseBox_eye
-senseBox_eye.build.board=senseBox_eye
+senseBox_eye.build.variant=sensebox_eye
+senseBox_eye.build.board=sensebox_eye
 
 senseBox_eye.build.cdc_on_boot=1
 senseBox_eye.build.msc_on_boot=1
