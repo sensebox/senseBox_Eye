@@ -28,7 +28,7 @@
 -1--GND
 ```
 
-### of the soil moisture sensor
+### of the soil moisture sensor (smt50)
 ```
 -4--moisture
 -3--temperature
@@ -39,3 +39,6 @@
 # Examples
 ### analog
 Read analog input and print it to serial.
+
+### smt50
+Print soil temperature to serial.
