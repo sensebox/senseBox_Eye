@@ -5,5 +5,5 @@
 ```
 
 # Examples
-Didn't manage to get a LoRa example running yet...
-Not sure how to connect to the module via UART programmatically. I think typically SPI is being used for communication.
+### basic-at-command
+Send AT-command to LoRa-modem and print response to serial. The appropriate AT-commands can be found in the command specification ("XXX" is a placeholder).
