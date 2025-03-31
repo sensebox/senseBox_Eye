@@ -6,3 +6,6 @@ Example script from the ESP32 BSP to print the mac addresses of the MCU to seria
 
 ### wifi-hotspot
 Create an access point and host a small website there.
+
+### ble
+Create a service and characteristic and then send and receive values through that characteristics. Can be tested with the "nRF Connect" app for example. 
