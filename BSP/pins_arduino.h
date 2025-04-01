@@ -44,10 +44,10 @@ static const uint8_t RX = 44;
 #define PIN_UART_ENABLE 26
 
 // SD-Card
-#define VSPI_MISO 40
-#define VSPI_MOSI 38
-#define VSPI_SCLK 39
-#define VSPI_SS   41
+#define MISO      40
+#define MOSI      38
+#define SCK       39
+#define SS        41
 #define SD_ENABLE 48
 
 #define PIN_SD_MISO   40
