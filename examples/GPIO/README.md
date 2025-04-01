@@ -1,6 +1,6 @@
 ### Pinout
 ```cpp
-#define gpio_pin 3
+#define GPIO_PIN 3
 ```
 
 # QWIIC interface
@@ -42,3 +42,6 @@ Read analog input and print it to serial.
 
 ### smt50
 Print soil temperature to serial.
+
+### led-matrix
+Display a guy with a hat on the LED-matrix. The GPIO pins need to be switched in the QWIIC cable for this to work.

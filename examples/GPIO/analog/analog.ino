@@ -1,4 +1,4 @@
-#define gpio_pin 3
+#define GPIO_PIN 3
 
 void setup() {
   Serial.begin(115200);
