@@ -8,4 +8,5 @@
 ```
 
 # Examples
-Didn't manage to get an sd-card example running yet...
+### sd-card-basics
+Test basic sd-card functionality and print results to serial.
