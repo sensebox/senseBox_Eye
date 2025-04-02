@@ -27,3 +27,6 @@ Requires version 3.0.7 of the BSP for face detection and recognition (newer vers
 
 ### camera-display
 Continuously print current camera image on the display.
+
+### camera-sd
+Capture a single camera image (as JPEG) and save it to sd-card. Requires PSRAM turned on.
