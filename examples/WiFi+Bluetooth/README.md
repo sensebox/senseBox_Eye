@@ -1,4 +1,4 @@
-The ESP32S3 chip includes both WiFi and Bluetooth functionality. For WiFi attach the antenna.
+The ESP32S3 chip includes both WiFi and Bluetooth functionality. Attach the included antenna to drastically improve the signal. Without the antenna the WiFi range is only like 2 or 3 metres.
 
 # Examples
 ### mac-address
