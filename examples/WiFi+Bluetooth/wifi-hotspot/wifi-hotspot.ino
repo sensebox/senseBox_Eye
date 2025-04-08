@@ -2,7 +2,7 @@
 #include <WebServer.h>
 
 // Set your hotspot (AP) credentials
-const char* ssid = "senseBox-eye";
+const char* ssid = "senseBox Eye";
 const char* password = "12345678";
 
 // Create a web server on port 80
