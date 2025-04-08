@@ -5,7 +5,7 @@
 #define ARDUHAL_LOG_LEVEL_LOCAL ESP_LOG_VERBOSE
 #include "esp_log.h"
 
-#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+#define SERVICE_UUID        "cf06a218-f68e-e0be-ad04-8ebc1eb0bc84"
 #define CHARACTERISTIC_UUID "772df7ec-8cdc-4ea9-86af-410abe0ba257"
 
 BLEServer* pServer = nullptr;
