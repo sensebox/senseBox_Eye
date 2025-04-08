@@ -16,11 +16,9 @@ void connectToWiFi() {
   Serial.println(WIFI_SSID);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   
-  int retryCount = 0;
-  while (WiFi.status() != WL_CONNECTED && retryCount < 30) {
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
-    retryCount++;
   }
 
   if (WiFi.status() == WL_CONNECTED) {
