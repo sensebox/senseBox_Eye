@@ -19,6 +19,12 @@
 #define PCLK_GPIO_NUM  13
 ```
 
+# Tested Camera models
+| model   | max resolution | color type | output format                                                | Len Size |
+| ------- | -------------- | ---------- | ------------------------------------------------------------ | -------- |
+| OV2640  | 1600 x 1200    | color      | YUV(422/420)/YCbCr422<br>RGB565/555<br>8-bit compressed data<br>8/10-bit Raw RGB data | 1/4"     |
+| OV7725  | 640 x 480      | color      | Raw RGB<br/>GRB 422<br/>RGB565/555/444<br/>YCbCr 422         | 1/4"     |
+
 # Examples
 ### CameraWebServer
 Default example from the esp32 BSP. Streams camera images over Wifi.
