@@ -255,6 +255,10 @@ bool switchCameraFormat(pixformat_t format, framesize_t frame_size) {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.grab_mode = CAMERA_GRAB_LATEST;
 
+  // to suppress error messages when switching camera profile
+  esp_log_level_set("gdma", ESP_LOG_NONE);
+  
   esp_camera_deinit();
+  esp_log_level_set("gdma", ESP_LOG_WARN);
   return esp_camera_init(&config) == ESP_OK;
 }
