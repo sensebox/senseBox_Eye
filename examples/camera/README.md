@@ -20,6 +20,8 @@
 ```
 
 # Tested Camera models
+The senseBox Eye comes with an OV2640. But its possible to attach other cameras that use the DVP too.
+
 | model   | max resolution | color type | output format                                                | Len Size |
 | ------- | -------------- | ---------- | ------------------------------------------------------------ | -------- |
 | OV2640  | 1600 x 1200    | color      | YUV(422/420)/YCbCr422<br>RGB565/555<br>8-bit compressed data<br>8/10-bit Raw RGB data | 1/4"     |
@@ -36,3 +38,6 @@ Continuously print current camera image on the display.
 
 ### camera-sd
 Capture a single camera image (as JPEG) and save it to sd-card. Requires PSRAM turned on.
+
+### ov7725
+Continuously print current camera image on the display. If the "SW"-Button is pressed, capture a single camera image (as RGB565, because ov7725 doesnt natively support JPEG) and save it to sd-card. Requires PSRAM turned on.
