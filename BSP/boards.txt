@@ -1,7 +1,7 @@
 ##############################################################
 # senseBox-eye
 
-sensebox_eye.name=senseBox-eye
+sensebox_eye.name=senseBox Eye
 senseBox_eye.vid.0=0x303A
 senseBox_eye.pid.0=0x82D1
 senseBox_eye.vid.1=0x303A
@@ -39,12 +39,12 @@ sensebox_eye.build.cdc_on_boot=1
 sensebox_eye.build.msc_on_boot=1
 sensebox_eye.build.dfu_on_boot=0
 sensebox_eye.build.f_cpu=240000000L
-sensebox_eye.build.flash_size=8MB
+sensebox_eye.build.flash_size=16MB (128Mb)
 sensebox_eye.build.flash_freq=80m
 sensebox_eye.build.flash_mode=dio
 sensebox_eye.build.boot=qio
 sensebox_eye.build.boot_freq=80m
-sensebox_eye.build.partitions=default_8MB
+sensebox_eye.build.partitions=default_16MB
 sensebox_eye.build.defines=
 sensebox_eye.build.loop_core=
 sensebox_eye.build.event_core=
@@ -81,8 +81,8 @@ sensebox_eye.menu.FlashMode.dio.build.boot=dio
 sensebox_eye.menu.FlashMode.dio.build.boot_freq=80m
 sensebox_eye.menu.FlashMode.dio.build.flash_freq=80m
 
-sensebox_eye.menu.FlashSize.8M=8MB (64Mb)
-sensebox_eye.menu.FlashSize.8M.build.flash_size=8MB
+sensebox_eye.menu.FlashSize.16M=16MB (128Mb)
+sensebox_eye.menu.FlashSize.16M.build.flash_size=16MB
 
 sensebox_eye.menu.LoopCore.1=Core 1
 sensebox_eye.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
@@ -138,6 +138,9 @@ sensebox_eye.menu.PartitionScheme.tinyuf2.build.custom_bootloader=bootloader_tin
 sensebox_eye.menu.PartitionScheme.tinyuf2.build.custom_partitions=partitions_tinyuf2
 sensebox_eye.menu.PartitionScheme.tinyuf2.upload.maximum_size=2097152
 sensebox_eye.menu.PartitionScheme.tinyuf2.upload.extra_flags=0x410000 "{runtime.platform.path}/variants/{build.variant}/tinyuf2.bin"
+sensebox_eye.menu.PartitionScheme.gen4esp32scheme4=Huge App (16MB APP)
+sensebox_eye.menu.PartitionScheme.gen4esp32scheme4.build.custom_partitions=gen4esp32_16MBapp
+sensebox_eye.menu.PartitionScheme.gen4esp32scheme4.upload.maximum_size=16646144
 
 sensebox_eye.menu.CPUFreq.240=240MHz (WiFi)
 sensebox_eye.menu.CPUFreq.240.build.f_cpu=240000000L
