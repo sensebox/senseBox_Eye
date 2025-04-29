@@ -10697,7 +10697,6 @@ Camera module</description>
 <part name="FRAME2" library="we-symbol" deviceset="FRAME-A4L" device=""/>
 <part name="FRAME3" library="we-symbol" deviceset="FRAME-A4L" device=""/>
 <part name="FRAME4" library="we-symbol" deviceset="FRAME-A4L" device=""/>
-<part name="R19" library="we-rcl" deviceset="RESISTOR" device="-0402" value="10k"/>
 <part name="R20" library="we-rcl" deviceset="RESISTOR" device="-0402" value="10k"/>
 <part name="R2" library="we-rcl" deviceset="RESISTOR" device="-0402" value="0"/>
 <part name="R3" library="we-rcl" deviceset="RESISTOR" device="-0402" value="0"/>
@@ -10834,7 +10833,6 @@ Camera module</description>
 <part name="GND46" library="we_supply1" deviceset="GND" device=""/>
 <part name="GND47" library="we_supply1" deviceset="GND" device=""/>
 <part name="GND48" library="we_supply1" deviceset="GND" device=""/>
-<part name="GND49" library="we_supply1" deviceset="GND" device=""/>
 <part name="GND50" library="we_supply1" deviceset="GND" device=""/>
 <part name="GND51" library="we_supply1" deviceset="GND" device=""/>
 <part name="GND52" library="we_supply1" deviceset="GND" device=""/>
@@ -12044,7 +12042,7 @@ Camera module</description>
 <pinref part="R34" gate="R" pin="1"/>
 </segment>
 </net>
-<net name="IO46" class="0">
+<net name="CAM_PWDN" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="IO46"/>
 <wire x1="119.38" y1="114.3" x2="111.76" y2="114.3" width="0.1524" layer="91"/>
@@ -12434,10 +12432,6 @@ Camera module</description>
 <attribute name="LAST_DATE_TIME" x="217.17" y="10.16" size="1.27" layer="94" font="vector" ratio="10"/>
 <attribute name="SHEET" x="230.505" y="5.08" size="2.54" layer="94" font="vector" ratio="10"/>
 </instance>
-<instance part="R19" gate="R" x="119.38" y="60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="118.11" y="60.96" size="1.778" layer="95" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="120.65" y="60.96" size="1.778" layer="96" rot="R90" align="top-center"/>
-</instance>
 <instance part="R20" gate="R" x="119.38" y="124.46" smashed="yes" rot="R90">
 <attribute name="NAME" x="118.11" y="124.46" size="1.778" layer="95" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="120.65" y="124.46" size="1.778" layer="96" rot="R90" align="top-center"/>
@@ -12449,9 +12443,6 @@ Camera module</description>
 <instance part="R24" gate="R" x="132.08" y="124.46" smashed="yes" rot="R90">
 <attribute name="NAME" x="130.81" y="124.46" size="1.778" layer="95" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="133.35" y="124.46" size="1.778" layer="96" rot="R90" align="top-center"/>
-</instance>
-<instance part="GND49" gate="1" x="119.38" y="50.8" smashed="yes">
-<attribute name="VALUE" x="116.84" y="48.26" size="1.778" layer="96"/>
 </instance>
 <instance part="GND50" gate="1" x="124.46" y="50.8" smashed="yes">
 <attribute name="VALUE" x="121.92" y="48.26" size="1.778" layer="96"/>
@@ -12517,12 +12508,8 @@ Camera module</description>
 </net>
 <net name="CAM_PWDN" class="0">
 <segment>
-<wire x1="147.32" y1="104.14" x2="119.38" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="104.14" x2="114.3" y2="104.14" width="0.1524" layer="91"/>
 <label x="114.3" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="R19" gate="R" pin="2"/>
-<wire x1="119.38" y1="104.14" x2="114.3" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="66.04" x2="119.38" y2="104.14" width="0.1524" layer="91"/>
-<junction x="119.38" y="104.14"/>
 <pinref part="IC2" gate="G$1" pin="PWDN"/>
 </segment>
 </net>
@@ -12639,11 +12626,6 @@ Camera module</description>
 <wire x1="124.46" y1="86.36" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="GND50" gate="1" pin="GND"/>
 <pinref part="IC2" gate="G$1" pin="DGND"/>
-</segment>
-<segment>
-<pinref part="R19" gate="R" pin="1"/>
-<wire x1="119.38" y1="53.34" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="GND49" gate="1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="147.32" y1="119.38" x2="139.7" y2="119.38" width="0.1524" layer="91"/>
