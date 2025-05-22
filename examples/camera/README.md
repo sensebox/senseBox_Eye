@@ -94,3 +94,5 @@ The following formats are supported:
 | PIXFORMAT_RAW        | RAW                    |
 | PIXFORMAT_RGB444     | 3BP2P / RGB444         |
 | PIXFORMAT_RGB555     | 3BP2P / RGB555         |
+
+The driver also supports a multitude of camera settings for image capture ([tutorial](https://randomnerdtutorials.com/esp32-cam-ov2640-camera-settings/)).
