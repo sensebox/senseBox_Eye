@@ -36,6 +36,9 @@ Default example from the esp32 BSP. Streams camera images over Wifi.
 
 Requires version 3.0.7 of the BSP for face detection and recognition (newer versions dont include the model zoo anymore). Dont forget to adjust the Wifi credentials.
 
+### CameraWebServer
+Same as CameraWebServer but with custom edge impulse model instead of face detection. Streaming is broken, only capturing single frames possible.
+
 ### camera-display
 Continuously print current camera image on the display.
 
