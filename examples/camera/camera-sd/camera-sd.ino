@@ -81,9 +81,11 @@ void setup() {
     
   camera_fb_t * fb = NULL;
   
-  // Take Picture with Camera
+  // capture to "warm up" camera
+  fb = esp_camera_fb_get();  
+  esp_camera_fb_return(fb); 
+  // capture the image to be saved on the SD Card
   Serial.println("capture image");
-  delay(3);
   fb = esp_camera_fb_get();  
   if(!fb) {
     Serial.println("Camera capture failed");
