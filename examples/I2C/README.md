@@ -28,3 +28,6 @@ Print PM1.0, PM2.5, PM4.0 and PM10 to serial.
 
 ### i2c-chain
 Combines display, vl53l8cx, hdc1080, mpu6050 and sps30. Draws the sensor measurements on the display and prints the loop times to serial.
+
+### vl53l8cx-led-matrix
+Display distances recorded by the vl53l8cx on the LED-matrix
