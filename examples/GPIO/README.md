@@ -1,13 +1,14 @@
 ### Pinout
 ```cpp
-#define GPIO_PIN 3
+#define IO14 14
+#define IO48 48
 ```
 
 # QWIIC interface
-### of the senseBox-Eye MCU
+### of the senseBox Eye
 ```
--4--
--3--IO3
+-4--IO14
+-3--IO48
 -2--3v3
 -1--GND
 ```
@@ -44,4 +45,4 @@ Read analog input and print it to serial.
 Print soil temperature to serial.
 
 ### led-matrix
-Display a guy with a hat on the LED-matrix. The GPIO pins need to be switched in the QWIIC cable for this to work.
+Display a guy with a hat on the LED-matrix.
