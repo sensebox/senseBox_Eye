@@ -2,7 +2,7 @@
 
 #include <Adafruit_NeoPixel.h>
 
-#define LED_PIN 14
+#define LED_PIN 45 //older prototypes used pin 14
 
 Adafruit_NeoPixel pixels(1, LED_PIN, NEO_GRB + NEO_KHZ800);
 
