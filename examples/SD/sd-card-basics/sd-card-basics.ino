@@ -19,7 +19,7 @@
 #define VSPI_MOSI   38 // CMD
 #define VSPI_SCLK   39 // SCK/CLK
 #define VSPI_SS     41 // CS
-#define SD_ENABLE   48
+#define SD_ENABLE   3
 SPIClass sdspi = SPIClass();
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
