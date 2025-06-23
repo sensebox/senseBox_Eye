@@ -1,4 +1,4 @@
-#define PWDN_GPIO_NUM  -1
+#define PWDN_GPIO_NUM  46
 #define RESET_GPIO_NUM -1
 #define XCLK_GPIO_NUM  15
 #define SIOD_GPIO_NUM  4
