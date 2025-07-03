@@ -16,9 +16,9 @@
 #define USB_FW_MSC_VOLUME_NAME      "senseBox"        // max 11 chars
 #define USB_FW_MSC_SERIAL_NUMBER    0x00000000
 
-#define PIN_RGB_LED 14  // RGB LED
-#define RGBLED_PIN  14  // RGB LED
-#define PIN_LED   14
+#define PIN_RGB_LED 45  // RGB LED
+#define RGBLED_PIN  45  // RGB LED
+#define PIN_LED   45
 #define RGBLED_NUM  1  // number of RGB LEDs
 
 // Default I2C QWIIC-Ports
@@ -28,10 +28,14 @@ static const uint8_t SCL = 1;
 #define PIN_QWIIC_SCL 1
 
 // IO Pins
-#define PIN_IO3   3
-static const uint8_t A3 = PIN_IO3; // Analog
-static const uint8_t D3 = PIN_IO3; // Digital
-static const uint8_t T3 = PIN_IO3; // Touch
+#define PIN_IO14   14
+static const uint8_t A14 = PIN_IO14; // Analog
+static const uint8_t D14 = PIN_IO14; // Digital
+static const uint8_t T14 = PIN_IO14; // Touch
+#define PIN_IO48   48
+static const uint8_t A48 = PIN_IO48; // Analog
+static const uint8_t D48 = PIN_IO48; // Digital
+static const uint8_t T48 = PIN_IO48; // Touch
 
 // Button
 #define PIN_BUTTON 47
@@ -48,20 +52,20 @@ static const uint8_t RX = 44;
 #define MOSI      38
 #define SCK       39
 #define SS        41
-#define SD_ENABLE 48
+#define SD_ENABLE 3
 
 #define PIN_SD_MISO   40
 #define PIN_SD_MOSI   38
 #define PIN_SD_SCLK   39
 #define PIN_SD_CS     41
-#define PIN_SD_ENABLE 48
+#define PIN_SD_ENABLE 3
 
 // USB
 #define PIN_USB_DM 19
 #define PIN_USB_DP 20
 
 // Camera
-#define PWDN_GPIO_NUM  -1
+#define PWDN_GPIO_NUM  46
 #define RESET_GPIO_NUM -1
 #define XCLK_GPIO_NUM  15
 #define SIOD_GPIO_NUM  4
