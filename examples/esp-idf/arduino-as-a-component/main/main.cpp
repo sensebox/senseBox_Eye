@@ -20,7 +20,7 @@ extern "C" {
 extern "C" {
     void app_main(void);
 
-    Adafruit_NeoPixel pixels(1, 14, NEO_GRB + NEO_KHZ800);
+    Adafruit_NeoPixel pixels(1, 45, NEO_GRB + NEO_KHZ800);
     uint16_t hue = 0;
 
     void updateLED();
