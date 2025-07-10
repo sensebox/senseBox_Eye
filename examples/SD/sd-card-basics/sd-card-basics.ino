@@ -1,17 +1,3 @@
-/*
- * Connect the SD card to the following pins:
- *
- * SD Card | ESP32
- *    D2       -
- *    D3       SS
- *    CMD      MOSI
- *    VSS      GND
- *    VDD      3.3V
- *    CLK      SCK
- *    VSS      GND
- *    D0       MISO
- *    D1       -
- */
 #include "FS.h"
 #include "SD.h"
 #include "SPI.h"
@@ -20,6 +6,7 @@
 #define VSPI_SCLK   39 // SCK/CLK
 #define VSPI_SS     41 // CS
 #define SD_ENABLE   3
+#define SD_SW       42 // card detect pin (LOW = card inserted)
 SPIClass sdspi = SPIClass();
 
 void listDir(fs::FS &fs, const char * dirname, uint8_t levels){
@@ -183,8 +170,13 @@ void setup(){
     Serial.begin(115200);
     pinMode(SD_ENABLE,OUTPUT);
     digitalWrite(SD_ENABLE,LOW);
-    delay(2000);
+    delay(1500);
+    pinMode(SD_SW, INPUT_PULLUP);
     sdspi.begin(VSPI_SCLK,VSPI_MISO,VSPI_MOSI,VSPI_SS);
+    while (digitalRead(SD_SW) != LOW) {
+        Serial.println("Please insert SD Card");
+        delay(2000);
+    }
     if(!SD.begin(VSPI_SS,sdspi)){
         Serial.println("Card Mount Failed");
         return;

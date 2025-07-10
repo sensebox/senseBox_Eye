@@ -5,6 +5,7 @@
 #define VSPI_SCLK   39 // SCK/CLK
 #define VSPI_SS     41 // CS
 #define SD_ENABLE   3
+#define SD_SW       42 // card detect pin (LOW = card inserted)
 ```
 
 # Examples
