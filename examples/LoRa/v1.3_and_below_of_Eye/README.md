@@ -1,3 +1,5 @@
+# for versions v1.0 to v1.3 of the senseBox Eye
+
 # Pinout
 ```cpp
 #define LORA_TX 43

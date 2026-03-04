@@ -26,16 +26,16 @@ void setup() {
   sendAT("AT");
 
   // Get DevEUI (for registration on TTN)
-  sendAT("AT+DEVEUI?");
+  sendAT("AT+DEVEUI?"); // 70741400000F467C
 
   // Set device address
-  sendAT("AT+DEVADDR=XXX");
+  sendAT("AT+DEVADDR=260B5AEB");
 
   // Set application session key
-  sendAT("AT+APPSKEY=XXX");
+  sendAT("AT+APPSKEY=59C4C234CDE6728EC161872B1D4F5CA0");
 
   // Set network session key
-  sendAT("AT+NWKSKEY=XXX");
+  sendAT("AT+NWKSKEY=1A00C2E463ED63B2668F78526EAE48AE");
 
   delay(1000);  // Short wait before sending message
 

@@ -28,13 +28,13 @@ void setup() {
   sendAT("AT");
 
   // Get DevEUI (for registration on TTN)
-  sendAT("AT+DEVEUI?");
+  sendAT("AT+DEVEUI?"); // 70741400000F467C
 
   // Set JoinEUI (AppEUI)
-  sendAT("AT+APPEUI=XXX");
+  sendAT("AT+APPEUI=0000000000000000");
 
   // Set AppKey
-  sendAT("AT+APPKEY=XXX");
+  sendAT("AT+APPKEY=FA0F6941B2D3BA9C89D6456BEBAC11B9");
 
   // Start Join process
   sendAT("AT+JOIN", 10000);  // Wait up to 10s
