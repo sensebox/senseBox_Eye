@@ -46,3 +46,6 @@ Print soil temperature to serial.
 
 ### led-matrix
 Display a guy with a hat on the LED-matrix.
+
+### scale
+Print measured weight using the HX711 to serial.
