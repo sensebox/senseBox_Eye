@@ -5,4 +5,4 @@ Our module is the "ESP32-S3-WROOM-1-N16R8" which has 16MB flash (Quad SPI) and 8
 - the folder `arduino`
 
 ## platformio/espressif32
-- the folder `micropython`
+- the folder `platformio`
