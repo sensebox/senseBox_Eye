@@ -34,24 +34,18 @@ void setup() {
   unsigned long start = millis();
   while (!Serial && (millis() - start) < 3000) { delay(10); }
 
-  Serial.println("\n=== Pin Setup ===");
-  Serial.println("\n=== SET SD_ENABLE (3) to LOW ===");
   pinMode(SD_ENABLE, OUTPUT);
   digitalWrite(SD_ENABLE, LOW);  // Try HIGH first
   delay(100);  // Let power stabilize
 
-  Serial.println("\n=== SET SD_CS (41) to HIGH ===");
   pinMode(41, OUTPUT);
   digitalWrite(41, HIGH);
   delay(100);  // Let power stabilize
 
-  Serial.println("\n=== SET LORA_CS (43) to LOW ===");
   // Deselect ALL SPI devices
   pinMode(43, OUTPUT);
   digitalWrite(43, LOW);
   delay(100);  // Let power stabilize
-
-  Serial.println("\n=== Pin Setup Done ===");
 
   persist.provision(band, subband, joinEUI, devEUI, appKey, nwkKey);
 
@@ -74,6 +68,7 @@ void setup() {
 
   if (!node->isActivated()) {
     Serial.printf("\nCould not join network. We'll go to sleep for %d seconds and try again later.\n", (int64_t)SLEEP_DURATION_SECONDS);
+    delay(10);
     esp_sleep_enable_timer_wakeup((int64_t)SLEEP_DURATION_SECONDS * 1000000);
     esp_deep_sleep_start();
   }
@@ -90,7 +85,7 @@ void setup() {
   // send the uplink
   state = node->sendReceive(uplinkDataPtr, sizeof(uplinkData), LORAWAN_UPLINK_USER_PORT);
   
-  if (state!= RADIOLIB_LORAWAN_NO_DOWNLINK && state!= RADIOLIB_ERR_NONE) {
+  if ((state < RADIOLIB_ERR_NONE) && (state != RADIOLIB_ERR_NONE)) {
     Serial.print("Error in sendReceive:");
     Serial.println(state);
     Serial.println();
