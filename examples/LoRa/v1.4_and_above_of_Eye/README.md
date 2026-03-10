@@ -2,8 +2,8 @@
 
 # Pinout
 ```cpp
-#define LORA_TX 43
-#define LORA_RX 44
+#define LORA_CS 43
+#define LORA_INT 44
 ```
 
 # Examples

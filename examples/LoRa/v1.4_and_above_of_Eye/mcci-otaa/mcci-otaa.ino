@@ -4,8 +4,8 @@
 #include <lmic.h> // http://librarymanager/All#IBM_LMIC_framework
 #include <hal/hal.h>
 
-#define LORA_TX 43
-#define LORA_RX 44
+#define LORA_CS 43
+#define LORA_INT 44
 
 static const u1_t PROGMEM APPEUI[8]= {XXX};
 void os_getArtEui (u1_t* buf) { memcpy_P(buf, APPEUI , 8);}
@@ -29,10 +29,10 @@ const unsigned TX_INTERVAL = 300;
 
 // Pin mapping
 const lmic_pinmap lmic_pins = {
-  .nss = LORA_TX,
+  .nss = LORA_CS,
   .rxtx = LMIC_UNUSED_PIN,
   .rst = LMIC_UNUSED_PIN,
-  .dio = {LORA_RX, LORA_RX, LMIC_UNUSED_PIN},
+  .dio = {LORA_INT, LORA_INT, LMIC_UNUSED_PIN},
 };
 
 void initLora() {
