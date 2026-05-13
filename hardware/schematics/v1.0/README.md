@@ -1,0 +1,1 @@
+In these schematics the sd-card is missing the CS-Pin. The sd-card doesnt work.
