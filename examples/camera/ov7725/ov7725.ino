@@ -12,7 +12,7 @@
 #include "driver/rtc_io.h"
 #include <EEPROM.h>
 
-#define SW_BUTTON 47
+#define SW_BUTTON 21
 
 #define EEPROM_SIZE 1
 

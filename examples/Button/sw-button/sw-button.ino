@@ -1,4 +1,4 @@
-#define SW_BUTTON 47
+#define SW_BUTTON 21
 
 void setup() {
   Serial.begin(115200);

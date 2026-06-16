@@ -1,6 +1,6 @@
 ### Pinout
 ```cpp
-#define SW_BUTTON   47
+#define SW_BUTTON   21
 #define BOOT_BUTTON 0
 ```
 

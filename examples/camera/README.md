@@ -46,10 +46,10 @@ Continuously print current camera image on the display.
 Capture a single camera image (as JPEG) and save it to sd-card. Requires PSRAM turned on.
 
 ### ov7725
-Continuously print current camera image on the display. If the "SW"-Button is pressed, capture a single camera image (as RGB565, because ov7725 doesnt natively support JPEG) and save it to sd-card. Requires PSRAM turned on.
+Continuously print current camera image on the display. If the "SW"-Button is pressed, capture a single camera image (as RGB565, because ov7725 doesnt natively support JPEG) and save it to sd-card. Requires PSRAM turned on. (Note: WIPES SD-CARD ON STARTUP)
 
 ### ov5640
-Continuously print current camera image on the display. If the "SW"-Button is pressed, capture a single camera image (as RGB565, because ov7725 doesnt natively support JPEG) and save it to sd-card. The highest resolution achieved with this script is 2560x1600px (4.1MP). Requires PSRAM turned on.
+Continuously print current camera image on the display. If the "SW"-Button is pressed, capture a single camera image (as RGB565, because ov5640 doesnt natively support JPEG) and save it to sd-card. The highest resolution achieved with this script is 2560x1600px (4.1MP). Requires PSRAM turned on. (Note: WIPES SD-CARD ON STARTUP)
 
 # esp32-camera
 The underlying camera driver used in these examples is [esp32-camera](https://github.com/espressif/esp32-camera). 
