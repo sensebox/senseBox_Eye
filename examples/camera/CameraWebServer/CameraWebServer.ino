@@ -1,19 +1,6 @@
+#include <Arduino.h>
 #include "esp_camera.h"
 #include <WiFi.h>
-
-//
-// WARNING!!! PSRAM IC required for UXGA resolution and high JPEG quality
-//            Ensure ESP32 Wrover Module or other board with PSRAM is selected
-//            Partial images will be transmitted if image exceeds buffer size
-//
-//            You must select partition scheme from the board menu that has at least 3MB APP space.
-//            Face Recognition is DISABLED for ESP32 and ESP32-S2, because it takes up from 15
-//            seconds to process single frame. Face Detection is ENABLED if PSRAM is enabled as well
-
-// ===================
-// Select camera model
-// ===================
-#include "camera_pins.h"
 
 // ===========================
 // Enter your WiFi credentials
@@ -22,18 +9,15 @@ const char *ssid = "xxx";
 const char *password = "xxx!";
 
 void startCameraServer();
-void setupLedFlash(int pin);
+void setupLedFlash();
 
 void setup() {
   Serial.begin(115200);
-  delay(2000);
   Serial.setDebugOutput(true);
   Serial.println();
 
-  // Camera config
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
-  config.ledc_timer = LEDC_TIMER_0;
   config.ledc_timer = LEDC_TIMER_0;
   config.pin_d0 = Y2_GPIO_NUM;
   config.pin_d1 = Y3_GPIO_NUM;
@@ -53,8 +37,8 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.frame_size = FRAMESIZE_UXGA;
-  config.pixel_format = PIXFORMAT_JPEG;  // for streaming (ov7725 doesnt support JPEG, use RGB565 with that)
-  // config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
+  config.pixel_format = PIXFORMAT_JPEG;  // for streaming
+  //config.pixel_format = PIXFORMAT_RGB565; // for face detection/recognition
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
@@ -115,12 +99,13 @@ void setup() {
 
 // Setup LED FLash if LED pin is defined in camera_pins.h
 #if defined(LED_GPIO_NUM)
-  setupLedFlash(LED_GPIO_NUM);
+  setupLedFlash();
 #endif
 
   WiFi.begin(ssid, password);
   WiFi.setSleep(false);
 
+  Serial.print("WiFi connecting");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
