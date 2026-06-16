@@ -18,9 +18,9 @@ void setup() {
   matrix.setBrightness(20);
   matrix.setTextWrap(false);
   matrix.begin();
+  matrix.drawRGBBitmap(0,0, bitmap_hat, WIDTH, HEIGHT);
+  matrix.show();
 }
 
 void loop() {
-  matrix.drawRGBBitmap(0,0, bitmap_hat, WIDTH, HEIGHT);
-  matrix.show();
 }
