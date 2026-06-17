@@ -60,8 +60,8 @@ static const uint8_t D48 = PIN_IO48;  // Digital
 static const uint8_t T48 = PIN_IO48;  // Touch
 
 // Button
-#define PIN_BUTTON 47
-#define BUTTON 47
+#define PIN_BUTTON 21
+#define BUTTON 21
 
 // =============================================
 // SD Card
